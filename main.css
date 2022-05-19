@@ -37,9 +37,7 @@ nav {
   background-position: center;
 }
 
-.bg {
-
-}
+/* for responsiveness, add extra color to bottom of mountain, or clamp the positioning based on viewport */
 .mountains {
   background-image: url(assets/mtrainiersvg.svg);
   background-size: 100%;
@@ -47,9 +45,9 @@ nav {
   z-index: 0;
 }
 .firstTrees {
-background-image: url(assets/firsttrees.png);
+background-image: url(assets/firsttrees2.png);
 z-index: 3;
-
+top: 15rem;
 }
 .secondTrees {
   background-image: url(assets/secondtrees.png);
@@ -63,7 +61,16 @@ z-index: 3;
   background-image: url(assets/fourthtrees.svg);
   z-index: 0;
   top: 30px;
-} 
+}
+
+.scrollIcon {
+width: 2rem;
+position: absolute;
+bottom: .5rem;
+right: 48%;
+z-index: 3;
+opacity: .4;
+}
 
 
 
