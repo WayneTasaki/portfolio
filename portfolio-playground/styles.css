@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fffae6;
+  background-image: url("images/beige-paper.png");
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alienlogo {
+  width: 20%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: #fbfbf8;
+  background-image: url("images/clean-gray-paper.png");
+  width: 50vw;
+  
+}
