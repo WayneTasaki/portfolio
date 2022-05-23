@@ -4,8 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: var(--white);
   font-family: 'Open Sans';
+}
+:root {
+  --white: #ebe5dd;
+  --darkBlue: #16242D;
 }
 
 html {
@@ -98,15 +102,21 @@ color: white;
 .content {
   width: 100%;
   background: #16242d;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 5;
   position: absolute;
+  overflow: hidden;
 }
 
-.text {
-  padding: 2rem 20rem;
-  font-size: 1.1rem;
-
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+.me {
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   opacity: 0;
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
@@ -119,11 +129,54 @@ color: white;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-.text.visible {
+.hello {
+  -webkit-transform: rotate(-20deg) scale(0.7);
+  -moz-transform: rotate(-20deg) scale(0.7);
+  -ms-transform: rotate(-20deg) scale(0.7);
+  -o-transform: rotate(-20deg) scale(0.7);
+  transform: rotate(-20deg) scale(0.7);
+  position: absolute;
+  bottom: 1rem;
+  left: 20%;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.projects {
+  height: 100vh;
+}
+
+.text {
+  padding: 2rem 20rem;
+  font-size: 1.1rem;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.visible {
   opacity: 1;
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   -o-transform: none;
   transform: none;
+}
+.hello.visible {
+  opacity: 1;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg) scale(1);
 }
