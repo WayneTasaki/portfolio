@@ -124,7 +124,7 @@ triggerHook: .9,
 // define movement of panels
 var wipeAnimation = new TimelineMax()
     // .fromTo("section.panel.", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-    .to(".projects-content", 1, {y: '-100%', ease: Linear.easeNone}) // scroll Content
+    .to(".projects-content", 10, {y: '-100%', ease: Linear.easeNone}) // scroll Content
     // .fromTo("section.panel",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
     // .fromTo("section.panel", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
 
@@ -132,7 +132,7 @@ var wipeAnimation = new TimelineMax()
     new ScrollMagic.Scene({
       triggerElement: ".projects",
       triggerHook: 0,
-      duration: $(window).height() - 100,
+      duration: $(window).height() -25,
       pushFollowers: false
   })
   .setPin(".projects-content")
