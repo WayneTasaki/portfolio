@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const controller = new ScrollMagic.Controller({
     globalSceneOptions: {
       triggerHook: 'onLeave',
-      duration: 0 // this works just fine with duration 0 as well
+      duration: '200%' // this works just fine with duration 0 as well
       // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
       // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
     }
@@ -120,29 +120,63 @@ triggerHook: .9,
 
 
 
+// -------------------
+// modal /lightbox
+// -------------------
 
-// define movement of panels
-var wipeAnimation = new TimelineMax()
-    // .fromTo("section.panel.", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-    .to(".projects-content", 10, {y: '-100%', ease: Linear.easeNone}) // scroll Content
-    // .fromTo("section.panel",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-    // .fromTo("section.panel", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+  document.body.style.overflow = 'hidden'
+  
+}
 
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+  document.body.style.overflow = 'auto'
+}
 
-    new ScrollMagic.Scene({
-      triggerElement: ".projects",
-      triggerHook: 0,
-      duration: $(window).height() -25,
-      pushFollowers: false
-  })
-  .setPin(".projects-content")
-  .setTween(wipeAnimation)
-  .addTo(controller);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-//   new ScrollMagic.Scene({
-//     triggerElement: ".projects-content",
-//     triggerHook: 0,
-//     // duration: '100%'
-// })
-// .setPin(".contact")
-// .addTo(controller);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let projectDesc = [
+    `Using a JSON file, I have the content on the page dynamically change based on what is clicked. Each time content changes, I use a fade-in and out animation which I felt is a better experience than having it abruptly change. I also chose to make the background slowly animated across the x-axis to give the feeling that the planets are moving through space.`, 
+    
+    `Though this is a simple landing page, the complexity comes from its responsiveness. When adjusting the browser window, elements on the page slowly move into place with very few hard breakpoints that change the layout. I did this with extensive use of clamp() on margins.`
+  ];
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerText = projectDesc[slideIndex-1];
+}
+
+var modal = document.getElementById("myModal");
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 

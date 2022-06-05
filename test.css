@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+[data-scroll-container] {
+  overflow: hidden !important;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.panel {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.panel.red {
+  background: red;
+
+}
+
+.panel.purple {
+  background: purple;
+}
+
+.panel.tomato {
+  background: tomato;
+}
+
+section.content {
+  position: relative;
+  height: 300vh;
+  background-color: teal;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -200vh;
+  z-index: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+

@@ -18,6 +18,9 @@ html {
   overflow-x: hidden;
 }
 
+/* body{
+  position: fixed;
+} */
 nav {
   position: absolute;
   display: flex;
@@ -40,10 +43,7 @@ nav {
   background: rgb(207,225,236);
   background: linear-gradient(0deg, rgba(207,225,236,1) 0%, rgba(48,120,161,1) 100%);
 }
-/* .panel{
-  height: 100vh;
-  width: 100%;
-} */
+
 
 .parallaxLayout {
   width: 100%;
@@ -216,46 +216,46 @@ color: white;
   background: #577282;
   z-index: 5;
   color: black;
-  height: 1800px;
+  height: 100vh;
+  margin-bottom: 20rem;
   }
   .projects-content {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+    gap: 1rem;
   }
 
-  /* h3 {
-    color: black;
-  } */
   .projectmockup {
-    padding-left: 1rem;
+    max-width: 100%;
   }
   .project-wrapper{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-  
-    /* background-color: white; */
-  }
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    }
   .project-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 30rem;
   }
   .project-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    letter-spacing: .2rem;  
+    letter-spacing: .15rem;  
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .project-links-wrapper {
     margin: .4rem;
-    letter-spacing: .15rem;
+    letter-spacing: .12rem;
   }
   .project-links {
-    margin: 1rem;
+    margin: .5rem;
   }
   .summary {
     text-align: center;
@@ -268,9 +268,138 @@ color: white;
     letter-spacing: .02rem;
   }
 
+  /* modal */
+  /* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 7;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #16242dde;
+
+}
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: var(--lightBlue);
+  margin: auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+.slideImg {
+  padding-top: 1.25rem;
+  padding-left: 4.5rem;
+  max-width: 51.563rem;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  max-width: 900px;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: var(--midBlue)
+}
+
+/* Number text (1/3 etc) */
+
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: var(--midBlue);
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+  width: 200px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+
+
+
   .contact {
     height: 100vh;
     background: var(--darkBlue);
     z-index: 6;
     color: var(--white);
   }
+
