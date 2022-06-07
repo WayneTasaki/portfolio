@@ -41,7 +41,7 @@ timeline
 .to('.secondTrees', 3, {y: -400}, {y: 0, duration: 5}, '-=5')
 .to('.mountainHill', 3, {y: -300}, '-=5')
 .to('.fourthTrees', 3, {y: -410}, '-=5')
-.to('.content', 5, {top: '0%'}, '-=5')
+.to('.content', 5, {top: '0%'}, '-=4')
 .to('.scrollIcon', 1.5, {y: -325}, '-=5')
 
 let scene = new ScrollMagic.Scene({
@@ -76,6 +76,15 @@ triggerHook: .7,
 })
 .setClassToggle(".text", "visible")
 .addTo(controller)
+
+
+// toolbelt icons fade in
+new ScrollMagic.Scene({
+  triggerElement: ".content",
+  triggerHook: .4,
+  })
+  .setClassToggle(".tools", "visible")
+  .addTo(controller)
 
 
 // reveal animation for my picture
@@ -119,6 +128,32 @@ triggerHook: .9,
 .addTo(controller);
 
 
+///////Extensions:
+TimelineLite.prototype.wait = function(position) {
+  var time = this.duration();
+  return this.set({}, {}, time + position);
+};
+////////////////////////
+
+var popup = new TimelineLite(); 
+popup
+.wait(1)
+.from('.bubble', 0.8, {scale:0, ease: Elastic.easeOut, x: '550px'})
+.wait(2)
+
+let jiggle = new TimelineMax({repeat: -1, repeatDelay: 5})
+jiggle
+.to('.bubble', 0.1, {y: '-=5', yoyo: true, repeat: 5, ease: Sine.easeInOut})
+
+
+new ScrollMagic.Scene({
+  triggerElement: ".contact",
+  triggerHook: .1, 
+  repeat: Infinity,
+  })
+  .setTween(popup)
+  .addTo(controller)
+
 
 // -------------------
 // modal /lightbox
@@ -156,6 +191,7 @@ function showSlides(n) {
     
     `Though this is a simple landing page, the complexity comes from its responsiveness. When adjusting the browser window, elements on the page slowly move into place with very few hard breakpoints that change the layout. I did this with extensive use of clamp() on margins.`
   ];
+
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");

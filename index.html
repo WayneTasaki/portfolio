@@ -13,7 +13,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-    <script data-main="scripts/app" src="scripts/require.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+
 
   <title>Wayne Tasaki | Frontend Web Developer</title>
 </head>
@@ -44,6 +45,15 @@
         <p class="text firstp">I've been playing with graphic design and web technologies since 2003 when I first taught myself Adobe Photoshop CS and Macromedia Dreamweaver. Though I eventually went to school for graphic design and worked as a freelancer, I found a similar passion in entrepreneurship.</p>
         <p class="text secondp">Having taken a detour in life to build my own businesses, the most successful of which I ran for the last 5 years, I've come full circle to chase my first love, the web.</p>
         <p class="text thirdp">I need to learn. All the time. I have an insatiable desire to learn new things and having done so my whole life, I've developed tools and habits to pick things up quickly. That, paired with my ability to problem solve, is what I believe would make me a killer member of any development team.</p>
+        <div class="toolbelt">
+          <img src="assets/html.svg" alt="" class="tools" id="html">
+          <img src="assets/css.svg" alt="" class="tools" id="css">
+          <img src="assets/js.svg" alt="" class="tools" id="js">
+          <img src="assets/ps.svg" alt="" class="tools" id="ps">
+          <img src="assets/figma.svg" alt="" class="tools" id="figma">
+          <img src="assets/vscode.svg" alt="" class="tools" id="vscode">
+          <img src="assets/git.svg" alt="" class="tools" id="git">
+        </div>
       <!-- </div> -->
   </section>
   
@@ -108,11 +118,17 @@
   
     </section>
     <section class="contact panel">
-      <p>Reach out and say hello!</p>
-      email
-      linkedin
-      github
-      twitter
+      <div class="contact-wrapper">
+        <div class="bubble notch" id="speechBubble">
+          <img src="assets/email.svg" alt="" class="contacticons">
+          <img src="assets/linkedin.svg" alt="" class="contacticons">
+          <img src="assets/githubcontact.svg" alt="" class="contacticons">
+          <img src="assets/twitter.svg" alt="" class="contacticons">
+        </div>
+        <h2 class="contactGreeting">Reach out and say hello!</h2>
+      </div>
+
+
       
     </section>
   

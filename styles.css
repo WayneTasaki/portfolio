@@ -210,6 +210,50 @@ color: white;
   -o-transform: rotate(-20deg);
   transform: rotate(-20deg);
 }
+.toolbelt {
+  max-width: 350px;
+  margin-left: 61%;
+  margin-top: 2rem;
+  bottom: 0;
+}
+.toolbelt img {
+  max-width: 6rem;
+  margin-top: 1rem;
+}
+.tools {
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+.tools.visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+
+}
+#js, #vscode {
+  margin-left: 6px;
+}
+#git {
+  display: block;
+  margin: 1rem 29%;
+}
 
 
 .projects {
@@ -396,10 +440,83 @@ img.hover-shadow {
 
 
 
-  .contact {
-    height: 100vh;
-    background: var(--darkBlue);
-    z-index: 6;
-    color: var(--white);
-  }
+.contact {
+  height: 100vh;
+  background: var(--darkBlue);
+  z-index: 6;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contactGreeting {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+}
 
+.bubble {
+  align-self: flex-end;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  padding: 20px;
+  margin-bottom: 2rem;
+  border-radius: .5rem;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  position:relative;
+  background-color: var(--white);
+  transform-origin: 0% 100%;
+}
+.bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 1rem solid var(--white);
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid var(--white);
+  border-bottom: 1rem solid transparent;
+  right: 19px;
+  bottom: -1.7rem;
+}
+.contacticons {
+  max-width: 7rem;
+}
+
+
+
+/* Here the scale changes from 0 to 1. To add the bounciness 
+effect, the scale is set to 1.25 midway through the animation
+to give the animation a nicer effect. */
+@keyframes expand-bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Here the scale simply goes from 1 back to 0 */
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
