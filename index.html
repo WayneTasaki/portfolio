@@ -1,185 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script src="main.js" defer></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
 
-  <title>Wayne Tasaki | Frontend Web Developer</title>
-</head>
-<body>
-    <section class="home panel">
+    <!-- ---------------- -->
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- js -->
+    <script
+      defer
+      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"
+    ></script>
+    <script
+      defer
+      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/ScrollToPlugin.min.js"></script>
+
+    <title>Wayne Tasaki | Frontend Web Developer</title>
+  </head>
+  <body>
+    <section class="home">
       <nav>
         <!-- <p>Wayne Tasaki</p>
         <a href="" class="button">signup</a> -->
       </nav>
-      <div class="container">
-          <h1 class="main-title">Wayne Tasaki</h1>
-          <h2 class="subtitle">Frontend Web Developer</h2>
-       
-        <div class="mountains parallaxLayout"></div>
-        <div class="firstTrees parallaxLayout"></div>
-        <div class="secondTrees parallaxLayout"></div>
-        <div class="mountainHill parallaxLayout"></div>
-        <div class="fourthTrees parallaxLayout"></div>
-        <div class="iconwrapper">
-          <img src="assets/scroll.svg" alt="" class="scrollIcon">
+      <!-- <div class="container"> -->
+
+
+        <div class="home-bg layer parallax" data-depth="0.10"></div>
+        <h1 class="main-title">Wayne Tasaki</h1>
+        <h2 class="subtitle">Frontend Web Developer</h2>
+        <div class="mtrainier layer parallax" data-depth="0.55"></div>
+        <div class="backtrees layer parallax" data-depth="0.80"></div>
+        <div class="hill layer parallax" data-depth="0.85"></div>
+        <div class="middletrees layer parallax" data-depth="0.70"></div>
+        <div class="firstTrees layer parallax" data-depth=".92"></div>
+        <!-- <div class="iconwrapper"> -->
+        <img src="assets/scroll.svg" alt="" class="scrollIcon" />
+        <!-- </div> -->
+      <!-- </div> -->
+    </section>
+
+    <div id="about" class="about section">
+      <!-- <div class="about-wrapper"></div> -->
+
+      <div class="about-wrapper">
+        <img src="assets/OutlinedProfilePic.png" class="me" alt=""  />
+        <img src="assets/hellomynameis.svg" class="hello" alt="" />
+        <p class="text firstp">
+          I've been playing with graphic design and web technologies since 2003
+          when I first taught myself Adobe Photoshop CS and Macromedia
+          Dreamweaver. Though I eventually went to school for graphic design and
+          worked as a freelancer, I found a similar passion in entrepreneurship.
+        </p>
+        <p class="text secondp">
+          Having taken a detour in life to build my own businesses, the most
+          successful of which I ran for the last 5 years, I've come full circle to
+          chase my first love, the web.
+        </p>
+        <p class="text thirdp">
+          I need to learn. All the time. I have an insatiable desire to learn new
+          things and having done so my whole life, I've developed tools and habits
+          to pick things up quickly. That, paired with my ability to problem
+          solve, is what I believe would make me a killer member of any
+          development team.
+        </p>
+        <div class="toolbelt">
+          <img src="assets/html.svg" alt="" class="tools" id="html" />
+          <img src="assets/css.svg" alt="" class="tools" id="css" />
+          <img src="assets/js.svg" alt="" class="tools" id="js" />
+          <img src="assets/ps.svg" alt="" class="tools" id="ps" />
+          <img src="assets/figma.svg" alt="" class="tools" id="figma" />
+          <img src="assets/vscode.svg" alt="" class="tools" id="vscode" />
+          <img src="assets/git.svg" alt="" class="tools" id="git" />
         </div>
       </div>
-    </section>
-    <section class="content panel">
-      <img src="assets/OutlinedProfilePic.png" alt="" class="me">
-      <img src="assets/hellomynameis.svg" class="hello" alt="">
-      <!-- <div class="textwrapper"> -->
-        <p class="text firstp">I've been playing with graphic design and web technologies since 2003 when I first taught myself Adobe Photoshop CS and Macromedia Dreamweaver. Though I eventually went to school for graphic design and worked as a freelancer, I found a similar passion in entrepreneurship.</p>
-        <p class="text secondp">Having taken a detour in life to build my own businesses, the most successful of which I ran for the last 5 years, I've come full circle to chase my first love, the web.</p>
-        <p class="text thirdp">I need to learn. All the time. I have an insatiable desire to learn new things and having done so my whole life, I've developed tools and habits to pick things up quickly. That, paired with my ability to problem solve, is what I believe would make me a killer member of any development team.</p>
-        <div class="toolbelt">
-          <img src="assets/html.svg" alt="" class="tools" id="html">
-          <img src="assets/css.svg" alt="" class="tools" id="css">
-          <img src="assets/js.svg" alt="" class="tools" id="js">
-          <img src="assets/ps.svg" alt="" class="tools" id="ps">
-          <img src="assets/figma.svg" alt="" class="tools" id="figma">
-          <img src="assets/vscode.svg" alt="" class="tools" id="vscode">
-          <img src="assets/git.svg" alt="" class="tools" id="git">
-        </div>
-      <!-- </div> -->
-  </section>
-  
-    <section class="projects panel">
+    </div>
+
+
+    
+    
+    <section class="projects section">
       <div class="projects-content">
         <div class="project-wrapper">
-          <img src="assets/project-planets.png" alt="" class="projectmockup" onclick="openModal();currentSlide(1)">
+          <img
+            src="assets/project-planets.png"
+            alt=""
+            class="projectmockup"
+            onclick="openModal();currentSlide(1)"
+          />
           <div class="project-text-wrapper">
             <div class="project-header">
               <h3>Planet Facts Site</h3>
               <div class="project-links-wrapper">
-                <a href="https://waynetasaki.github.io/planets-fact-site/" target="_blank" class="project-links">Live Site</a>|<a href="https://github.com/WayneTasaki/planets-fact-site" target="_blank" class="project-links">GitHub</a>
+                <a
+                  href="https://waynetasaki.github.io/planets-fact-site/"
+                  target="_blank"
+                  class="project-links"
+                  >Live Site</a
+                >|<a
+                  href="https://github.com/WayneTasaki/planets-fact-site"
+                  target="_blank"
+                  class="project-links"
+                  >GitHub</a
+                >
               </div>
             </div>
-            <p class="project-description summary">Educational website with information on the planets of our solar system</p>
-            <p class="project-description">Using a JSON file, I have the content on the page dynamically change based on what is clicked. Each time content changes, I use a fade-in and out animation which I felt is a better experience than having it abruptly change. I also chose to make the background slowly animated across the x-axis to give the feeling that the planets are moving through space.</p>
-          </div>
-        </div>
-    
-        <div class="project-wrapper">
-          <img src="assets/project-equalizer.png" alt="" class="projectmockup" onclick="openModal();currentSlide(2)">
-          <div class="project-text-wrapper">
-            <div class="project-header">
-              <h3>Equalizer Landing Page</h3>
-              <div class="project-links-wrapper">
-                <a href="https://waynetasaki.github.io/equalizerLandingPage/" target="_blank" class="project-links">Live Site</a>|<a href="https://github.com/WayneTasaki/equalizerLandingPage" target="_blank" class="project-links">GitHub</a>
-              </div>
-            </div>
-            <p class="project-description summary">Landing page for an audio equalizer software being sold by a fictional company named Equalizer</p>
-            <p class="project-description">Though this is a simple landing page, the complexity comes from its responsiveness. When adjusting the browser window, elements on the page slowly move into place with very few hard breakpoints that change the layout. I did this with extensive use of clamp() on margins.</p>
+            <p class="project-description summary">
+              Educational website with information on the planets of our solar
+              system
+            </p>
+            <p class="project-description">
+              Using a JSON file, I have the content on the page dynamically
+              change based on what is clicked. Each time content changes, I use
+              a fade-in and out animation which I felt is a better experience
+              than having it abruptly change. I also chose to make the
+              background slowly animated across the x-axis to give the feeling
+              that the planets are moving through space.
+            </p>
           </div>
         </div>
 
         <div class="project-wrapper">
-          <img src="assets/project-equalizer.png" alt="" class="projectmockup" onclick="openModal();currentSlide(3)">
+          <img
+            src="assets/project-equalizer.png"
+            alt=""
+            class="projectmockup"
+            onclick="openModal();currentSlide(2)"
+          />
           <div class="project-text-wrapper">
             <div class="project-header">
               <h3>Equalizer Landing Page</h3>
               <div class="project-links-wrapper">
-                <a href="https://waynetasaki.github.io/equalizerLandingPage/" target="_blank" class="project-links">Live Site</a>|<a href="https://github.com/WayneTasaki/equalizerLandingPage" target="_blank" class="project-links">GitHub</a>
+                <a
+                  href="https://waynetasaki.github.io/equalizerLandingPage/"
+                  target="_blank"
+                  class="project-links"
+                  >Live Site</a
+                >|<a
+                  href="https://github.com/WayneTasaki/equalizerLandingPage"
+                  target="_blank"
+                  class="project-links"
+                  >GitHub</a
+                >
               </div>
             </div>
-            <p class="project-description summary">Landing page for an audio equalizer software being sold by a fictional company named Equalizer</p>
-            <p class="project-description">Though this is a simple landing page, the complexity comes from its responsiveness. When adjusting the browser window, elements on the page slowly move into place with very few hard breakpoints that change the layout. I did this with extensive use of clamp() on margins.</p>
+            <p class="project-description summary">
+              Landing page for an audio equalizer software being sold by a
+              fictional company named Equalizer
+            </p>
+            <p class="project-description">
+              Though this is a simple landing page, the complexity comes from
+              its responsiveness. When adjusting the browser window, elements on
+              the page slowly move into place with very few hard breakpoints
+              that change the layout. I did this with extensive use of clamp()
+              on margins.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-wrapper">
+          <img
+            src="assets/project-equalizer.png"
+            alt=""
+            class="projectmockup"
+            onclick="openModal();currentSlide(3)"
+          />
+          <div class="project-text-wrapper">
+            <div class="project-header">
+              <h3>Equalizer Landing Page</h3>
+              <div class="project-links-wrapper">
+                <a
+                  href="https://waynetasaki.github.io/equalizerLandingPage/"
+                  target="_blank"
+                  class="project-links"
+                  >Live Site</a
+                >|<a
+                  href="https://github.com/WayneTasaki/equalizerLandingPage"
+                  target="_blank"
+                  class="project-links"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <p class="project-description summary">
+              Landing page for an audio equalizer software being sold by a
+              fictional company named Equalizer
+            </p>
+            <p class="project-description">
+              Though this is a simple landing page, the complexity comes from
+              its responsiveness. When adjusting the browser window, elements on
+              the page slowly move into place with very few hard breakpoints
+              that change the layout. I did this with extensive use of clamp()
+              on margins.
+            </p>
           </div>
         </div>
         <div class="project-wrapper">
-          <img src="assets/project-equalizer.png" alt="" class="projectmockup" onclick="openModal();currentSlide(4)">
+          <img
+            src="assets/project-equalizer.png"
+            alt=""
+            class="projectmockup"
+            onclick="openModal();currentSlide(4)"
+          />
           <div class="project-text-wrapper">
             <div class="project-header">
               <h3>Equalizer Landing Page</h3>
               <div class="project-links-wrapper">
-                <a href="https://waynetasaki.github.io/equalizerLandingPage/" target="_blank" class="project-links">Live Site</a>|<a href="https://github.com/WayneTasaki/equalizerLandingPage" target="_blank" class="project-links">GitHub</a>
+                <a
+                  href="https://waynetasaki.github.io/equalizerLandingPage/"
+                  target="_blank"
+                  class="project-links"
+                  >Live Site</a
+                >|<a
+                  href="https://github.com/WayneTasaki/equalizerLandingPage"
+                  target="_blank"
+                  class="project-links"
+                  >GitHub</a
+                >
               </div>
             </div>
-            <p class="project-description summary">Landing page for an audio equalizer software being sold by a fictional company named Equalizer</p>
-            <p class="project-description">Though this is a simple landing page, the complexity comes from its responsiveness. When adjusting the browser window, elements on the page slowly move into place with very few hard breakpoints that change the layout. I did this with extensive use of clamp() on margins.</p>
+            <p class="project-description summary">
+              Landing page for an audio equalizer software being sold by a
+              fictional company named Equalizer
+            </p>
+            <p class="project-description">
+              Though this is a simple landing page, the complexity comes from
+              its responsiveness. When adjusting the browser window, elements on
+              the page slowly move into place with very few hard breakpoints
+              that change the layout. I did this with extensive use of clamp()
+              on margins.
+            </p>
           </div>
         </div>
       </div>
-
-  
     </section>
-    <section class="contact panel">
+    <section class="contact section">
       <div class="contact-wrapper">
         <div class="bubble notch" id="speechBubble">
-          <img src="assets/email.svg" alt="" class="contacticons">
-          <img src="assets/linkedin.svg" alt="" class="contacticons">
-          <img src="assets/githubcontact.svg" alt="" class="contacticons">
-          <img src="assets/twitter.svg" alt="" class="contacticons">
+          <img src="assets/email.svg" alt="" class="contacticons" />
+          <img src="assets/linkedin.svg" alt="" class="contacticons" />
+          <img src="assets/githubcontact.svg" alt="" class="contacticons" />
+          <img src="assets/twitter.svg" alt="" class="contacticons" />
         </div>
         <h2 class="contactGreeting">Reach out and say hello!</h2>
       </div>
-
-
-      
     </section>
-  
+
     <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="mySlides">
+          <img src="assets/project-planets.png" class="slideImg" />
+        </div>
 
-  <div class="modal-content">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="mySlides">
-      <img src="assets/project-planets.png" class="slideImg">
+        <div class="mySlides">
+          <img src="assets/project-equalizer.png" class="slideImg" />
+        </div>
+
+        <div class="mySlides">
+          <img src="assets/project-equalizer.png" class="slideImg" />
+        </div>
+
+        <div class="mySlides">
+          <img src="assets/project-equalizer.png" class="slideImg" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/project-planets.png"
+            onclick="currentSlide(1)"
+            alt="Nature"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/project-equalizer.png"
+            onclick="currentSlide(2)"
+            alt="Snow"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/project-equalizer.png"
+            onclick="currentSlide(3)"
+            alt="Mountains"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/project-equalizer.png"
+            onclick="currentSlide(4)"
+            alt="Lights"
+          />
+        </div>
+      </div>
     </div>
-
-    <div class="mySlides">
-      <img src="assets/project-equalizer.png" class="slideImg">
-    </div>
-
-    <div class="mySlides">
-      <img src="assets/project-equalizer.png" class="slideImg">
-    </div>
-
-    <div class="mySlides">
-      <img src="assets/project-equalizer.png" class="slideImg">
-    </div>
-
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <!-- Thumbnail image controls -->
-    <div class="column">
-      <img class="demo" src="assets/project-planets.png" onclick="currentSlide(1)" alt="Nature">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="assets/project-equalizer.png" onclick="currentSlide(2)" alt="Snow">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="assets/project-equalizer.png" onclick="currentSlide(3)" alt="Mountains">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="assets/project-equalizer.png" onclick="currentSlide(4)" alt="Lights">
-    </div>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>

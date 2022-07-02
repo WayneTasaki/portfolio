@@ -1,77 +1,60 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const controller = new ScrollMagic.Controller({
-    globalSceneOptions: {
-      triggerHook: 'onLeave',
-      duration: '200%' // this works just fine with duration 0 as well
-      // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
-      // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
-    }
-  });
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  // get all slides
-  let slides = document.querySelectorAll(".panel");
+const tl = gsap.timeline({
+	scrollTrigger: {
+		trigger: "#hero",
+		start: "top top",
+		end: "+=100%",
+		scrub: true,
+		invalidateOnRefresh: true
+	}
+});
 
-  // create scene for every slide
-  for (let i = 0; i < slides.length; i++) {
-    new ScrollMagic.Scene({
-        triggerElement: slides[i]
-      })
-      .setPin(slides[i], {pushFollowers: false})
-      .addTo(controller);
-  };
-
-}, false);
-
+gsap.utils.toArray(".parallax").forEach(layer => {
+	const depth = layer.dataset.depth;
+	const movement = -(layer.offsetHeight * depth)
+	tl.to(layer, {y: movement, ease: "none"}, 0)
+});
 
 
 let controller = new ScrollMagic.Controller()
 
 
 
-
-
-
-
-
-// home page parallax
-let timeline = new TimelineMax()
-timeline
-.to('.firstTrees', 5, { y: -970}, '-=5')
-.to('.mountains', 5, { y: -400}, '-=5')
-.to('.secondTrees', 3, {y: -400}, {y: 0, duration: 5}, '-=5')
-.to('.mountainHill', 3, {y: -300}, '-=5')
-.to('.fourthTrees', 3, {y: -410}, '-=5')
-.to('.content', 5, {top: '0%'}, '-=4')
-.to('.scrollIcon', 1.5, {y: -325}, '-=5')
-
-let scene = new ScrollMagic.Scene({
-triggerElement: '.parOne',
-duration: '170%',
-triggerHook: 0,
-})
-.setTween(timeline)
-.setPin('.parOne')
-.addTo(controller);
-
-
 // home page text/ scroll icon reveal
 gsap.from('.main-title', {opacity:0, duration: 1.4, delay: 1, y: 35, ease:'expo.out'});
 gsap.from('.subtitle', {opacity:0, duration: 1, delay: 1.4 , y: 35, ease:'expo.out'});
-gsap.from('.scrollIcon', {opacity: 0, duration: 1.1, delay:1.8})
+gsap.from('.scrollIcon', {opacity: 0, duration: 1.1, delay:1.2})
 
 
 // scroll icon fade out when scrolling down page
 new ScrollMagic.Scene({
-triggerElement: ".content",
-triggerHook: .9, 
+triggerElement: ".about",
+triggerHook: .99, 
 })
-.setTween('.scrollIcon', {opacity: 0, duration: .4,})
+.setTween('.scrollIcon', {opacity: 0, duration: 0.4})
 .addTo(controller);
+
+
+// Next section scrolls on top of previous
+let panels = gsap.utils.toArray(".section")
+
+panels.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top", 
+    pin: true, 
+    pinSpacing: false,
+    invalidateOnRefresh: true
+  });
+});
+
+
 
 
 // content section text fade in
 new ScrollMagic.Scene({
-triggerElement: ".content",
+triggerElement: ".about",
 triggerHook: .7,
 })
 .setClassToggle(".text", "visible")
@@ -80,7 +63,7 @@ triggerHook: .7,
 
 // toolbelt icons fade in
 new ScrollMagic.Scene({
-  triggerElement: ".content",
+  triggerElement: ".about",
   triggerHook: .4,
   })
   .setClassToggle(".tools", "visible")
@@ -90,7 +73,7 @@ new ScrollMagic.Scene({
 // reveal animation for my picture
 let meTween = TweenMax.fromTo('.me', .4, {bottom: -550}, {bottom: 0})
 new ScrollMagic.Scene({
-triggerElement: ".content",
+triggerElement: ".about",
 triggerHook: .5, 
 })
 .setClassToggle(".me", "visible")
@@ -102,7 +85,7 @@ triggerHook: .5,
 // reveal animation for the "hello my name is" sticker
 let helloTween = TweenMax.fromTo('.hello', .3, {bottom: -350}, {bottom: '1rem'})
 new ScrollMagic.Scene({
-triggerElement: ".content",
+triggerElement: ".about",
 triggerHook: .5,
 })
 .setClassToggle(".hello", "visible")
@@ -140,10 +123,10 @@ popup
 .wait(1)
 .from('.bubble', 0.8, {scale:0, ease: Elastic.easeOut, x: '550px'})
 .wait(2)
-
 let jiggle = new TimelineMax({repeat: -1, repeatDelay: 5})
 jiggle
 .to('.bubble', 0.1, {y: '-=5', yoyo: true, repeat: 5, ease: Sine.easeInOut})
+
 
 
 new ScrollMagic.Scene({
