@@ -1,40 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--white);
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 :root {
   --white: #ebe5dd;
-  --darkBlue: #16242D;
+  --darkBlue: #16242d;
   --midBlue: #2c4655;
   --lightBlue: #577282;
 }
-
 html {
   overflow-x: hidden;
-  background-color: #16242D;
-
+  background-color: #16242d;
 }
-
-body{
+body {
   /* width: 100vw; */
   overflow-y: hidden;
 }
 .section {
   padding-bottom: 200vh;
 }
-nav {
+/* nav {
   position: absolute;
   display: flex;
   padding: 3rem 10rem;
   justify-content: space-between;
   width: 100%;
   z-index: 1;
-}
+} */
+
+
+/* --------- */
+/* HOME PAGE */
+/* --------- */
 .home {
   height: 100vh;
   overflow: hidden;
@@ -42,26 +44,42 @@ nav {
   /* max-width: 1920px; */
   /* margin: 0 auto; */
 }
+.home-bg {
+  background: rgb(207, 225, 236);
+  background: linear-gradient(
+    0deg,
+    rgba(207, 225, 236, 1) 2%,
+    rgba(48, 120, 161, 1) 100%,
+    rgba(22, 36, 45, 1) 10%
+  );
+  z-index: 0;
+}
+.mobile-firstname {
+  display: none;
+}
+.mobile-lastname {
+  display: none;
+}
 .main-title {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  font-size: 5rem;
+  font-size: clamp(4rem, 3.6755rem + 1.4222vw, 5rem);
   font-weight: 800;
   z-index: 0;
   color: white;
-  }
+}
 .subtitle {
   position: fixed;
   right: 4.5rem;
   top: 8rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 0.5570rem + 1.0127vw, 1.5rem);
   font-style: italic;
   font-weight: 600;
   letter-spacing: 4px;
   z-index: 0;
   color: rgb(255, 255, 255);
-  }
+}
 .layer {
   background-position: bottom center;
   background-size: auto;
@@ -71,37 +89,32 @@ nav {
   position: fixed;
   z-index: 0;
 }
-.home, .layer {
+.home,
+.layer {
   min-height: 800px;
 }
-.home-bg {
-  background: rgb(207,225,236);
-  background: linear-gradient(0deg, rgba(207,225,236,1) 2%, rgba(48,120,161,1) 100%, rgba(22,36,45,1) 10%);
-  z-index: 0;
-}
+
 .mtrainier {
   background-image: url(assets/mtrainiersvg.svg);
   background-size: 100%;
-  /* bottom: 10rem; */
+  bottom: 2.6rem;
   /* background-position: left 0 bottom 1rem; */
 }
 .backtrees {
   background-image: url(assets/fourthtrees.svg);
-  top: 3rem;
+  top: 2rem;
   background-size: 101%;
 }
 .middletrees {
   background-image: url(assets/secondtrees.png);
   background-size: 100%;
   top: 1rem;
-
 }
 .hill {
   background-image: url(assets/thirdhillssvg.svg);
   background-size: 85%;
   background-position: bottom 1.5rem right -2rem;
   top: 1rem;
-
 }
 .firstTrees {
   background-image: url(assets/firsttreestest.png);
@@ -112,10 +125,10 @@ nav {
 .scrollIcon {
   width: 2rem;
   position: absolute;
-  bottom: .5rem;
+  bottom: 0.5rem;
   right: 48%;
   z-index: 5;
-  opacity: .4;
+  opacity: 0.4;
 }
 /* .container {
   height: 100vh;
@@ -126,7 +139,7 @@ nav {
 } */
 
 #about {
-  background-color: #16242D;
+  background-color: #16242d;
   height: 100vh;
   position: relative;
 }
@@ -134,7 +147,6 @@ nav {
   height: 100vh;
   position: relative;
 }
-
 
 .projects {
   height: 100vh;
@@ -144,7 +156,6 @@ nav {
   height: 100vh;
   background-color: sandybrown;
 }
-
 
 /* ------------------------- */
 .about-wrapper {
@@ -194,7 +205,7 @@ nav {
 
 .text {
   padding-top: 3rem;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   font-size: 1.1rem;
   opacity: 0;
@@ -214,13 +225,11 @@ nav {
   padding-left: 20%;
   padding-right: 20%;
   text-align: end;
-
 }
 .secondp {
   padding-left: 30%;
   padding-right: 15%;
   text-align: end;
-
 }
 .thirdp {
   padding-left: 40%;
@@ -278,9 +287,9 @@ nav {
   -ms-transition: all 1.5s ease-in-out;
   -o-transition: all 1.5s ease-in-out;
   transition: all 1.5s ease-in-out;
-
 }
-#js, #vscode {
+#js,
+#vscode {
   margin-left: 6px;
 }
 #git {
@@ -288,59 +297,57 @@ nav {
   margin: 1rem 29%;
 }
 
+.projects-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  gap: 1rem;
+}
 
+.projectmockup {
+  max-width: 100%;
+}
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+.project-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.15rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+.project-links-wrapper {
+  margin: 0.4rem;
+  letter-spacing: 0.12rem;
+}
+.project-links {
+  margin: 0.5rem;
+}
+.summary {
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.025rem;
+  margin-bottom: 1rem;
+}
+.project-description {
+  margin: 0.5rem;
+  letter-spacing: 0.02rem;
+}
 
-  .projects-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 5rem;
-    gap: 1rem;
-  }
-
-  .projectmockup {
-    max-width: 100%;
-  }
-  .project-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-    }
-  .project-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .project-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    letter-spacing: .15rem;  
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  .project-links-wrapper {
-    margin: .4rem;
-    letter-spacing: .12rem;
-  }
-  .project-links {
-    margin: .5rem;
-  }
-  .summary {
-    text-align: center;
-    font-style: italic;
-    letter-spacing: .025rem;
-    margin-bottom: 1rem;
-  }
-  .project-description {
-    margin: .5rem;
-    letter-spacing: .02rem;
-  }
-
-  /* modal */
-  /* Create four equal columns that floats next to eachother */
+/* modal */
+/* Create four equal columns that floats next to eachother */
 .column {
   float: left;
   width: 25%;
@@ -358,7 +365,6 @@ nav {
   height: 100%;
   overflow: auto;
   background-color: #16242dde;
-
 }
 body.modal-open {
   height: 100vh;
@@ -436,11 +442,10 @@ body.modal-open {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: var(--midBlue)
+  background-color: var(--midBlue);
 }
 
 /* Number text (1/3 etc) */
-
 
 /* Caption text */
 .caption-container {
@@ -463,9 +468,6 @@ img.demo {
 img.hover-shadow {
   transition: 0.3s;
 }
-
-
-
 
 .contact {
   width: 100%;
@@ -498,11 +500,11 @@ img.hover-shadow {
   width: 550px;
   padding: 20px;
   margin-bottom: 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-align: center;
   font-weight: 900;
   color: #fff;
-  position:relative;
+  position: relative;
   background-color: var(--white);
   transform-origin: 0% 100%;
 }
@@ -521,7 +523,6 @@ img.hover-shadow {
 .contacticons {
   max-width: 7rem;
 }
-
 
 /* ---------- */
 /* ULTRA WIDE */
@@ -542,6 +543,121 @@ img.hover-shadow {
     right: 6rem;
   }
 } */
+
+
+@media (max-width: 800px) {
+  .main-title {
+    position: fixed;
+    top: 20%; 
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .subtitle {
+    position: fixed;
+    top: 31%; 
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .mtrainier {
+    background-image: url(assets/mtrainiersvg.svg);
+    background-size: 120%;
+    bottom: 1rem;
+    /* background-position: left 0 bottom 1rem; */
+  }
+  .backtrees {
+    background-image: url(assets/fourthtrees.svg);
+    top: 1.5rem;
+    background-size: 121%;
+  }
+  .middletrees {
+    background-image: url(assets/secondtrees.png);
+    background-size: 125%;
+    top: .5rem;
+  }
+  .hill {
+    background-image: url(assets/thirdhillssvg.svg);
+    background-size: 105%;
+    background-position: bottom 1.5rem right -2rem;
+    top: 2rem;
+  }
+  .firstTrees {
+    background-image: url(assets/firsttreestest.png);
+    background-size: 120%;
+    top: .5rem;
+  }
+  
+  .scrollIcon {
+    bottom: 1rem;
+  }
+}
+
+
+@media (max-width: 478px) {
+  .default {
+    display: none;
+  }
+  .mobile-firstname {
+    display: block;
+    font-size: clamp(4.5rem, -4.2823rem + 31.0704vw, 5rem);
+    /* padding-right: 5rem; */
+    top: 15%;
+    letter-spacing: 3px;
+  }
+  .mobile-lastname {
+    display: block;
+    font-size: clamp(4.5rem, -4.2823rem + 31.0704vw, 5rem);
+    margin-top: 3.5rem;
+    /* padding-left: 4rem; */
+    /* margin-left: .02rem; */
+    letter-spacing: 3px;
+  }
+  .subtitle {
+    position:fixed;
+    right: 50%;
+    left: 0;
+    top: 35%;
+    text-align: center;
+    font-size: clamp(1.3rem, 0.5570rem + 1.0127vw, 1.5rem);
+  }
+
+
+  .mtrainier {
+    background-image: url(assets/mtrainiersvg.svg);
+    background-size: 180%;
+    bottom: 5rem;
+    /* background-position: left 0 bottom 1rem; */
+  }
+  .backtrees {
+    background-image: url(assets/fourthtrees.svg);
+    top: -1.5rem;
+    background-size: 191%;
+  }
+  .middletrees {
+    background-image: url(assets/secondtrees.png);
+    background-size: 195%;
+    top: -.5rem;
+  }
+  .hill {
+    background-image: url(assets/thirdhillssvg.svg);
+    background-size: 165%;
+    background-position: bottom 2.5rem right -3.5rem;
+    top: 1.5rem;
+  }
+  .firstTrees {
+    background-image: url(assets/firsttreestest.png);
+    background-size: 200%;
+    top: 0;
+  }
+}
+
 
 /* Here the scale changes from 0 to 1. To add the bounciness 
 effect, the scale is set to 1.25 midway through the animation
