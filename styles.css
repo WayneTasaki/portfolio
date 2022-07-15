@@ -16,13 +16,15 @@
 html {
   overflow-x: hidden;
   background-color: #16242d;
+  /* height: 100vh; */
 }
 body {
   /* width: 100vw; */
   overflow-y: hidden;
+  /* height: 100vh; */
 }
 .section {
-  padding-bottom: 200vh;
+  padding-bottom: 375%;
 }
 /* nav {
   position: absolute;
@@ -33,12 +35,11 @@ body {
   z-index: 1;
 } */
 
-
 /* --------- */
 /* HOME PAGE */
 /* --------- */
 .home {
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
   position: relative;
   /* max-width: 1920px; */
@@ -73,7 +74,7 @@ body {
   position: fixed;
   right: 4.5rem;
   top: 8rem;
-  font-size: clamp(1.2rem, 0.5570rem + 1.0127vw, 1.5rem);
+  font-size: clamp(1.2rem, 0.557rem + 1.0127vw, 1.5rem);
   font-style: italic;
   font-weight: 600;
   letter-spacing: 4px;
@@ -85,13 +86,13 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   z-index: 0;
 }
 .home,
 .layer {
-  min-height: 800px;
+  min-height: 100vh;
 }
 
 .mtrainier {
@@ -544,11 +545,10 @@ img.hover-shadow {
   }
 } */
 
-
-@media (max-width: 800px) {
+@media (max-device-width: 800px) {
   .main-title {
     position: fixed;
-    top: 20%; 
+    top: 20%;
     /* left: 50%; */
     /* transform: translate(-50%, -50%); */
     right: 0;
@@ -557,14 +557,13 @@ img.hover-shadow {
   }
   .subtitle {
     position: fixed;
-    top: 31%; 
+    top: 31%;
     left: 10%;
     /* transform: translate(-50%, -50%); */
     right: 0;
     width: 100%;
     text-align: center;
   }
-
 
   .mtrainier {
     background-image: url(assets/mtrainiersvg.svg);
@@ -580,7 +579,7 @@ img.hover-shadow {
   .middletrees {
     background-image: url(assets/secondtrees.png);
     background-size: 125%;
-    top: .5rem;
+    top: 0.5rem;
   }
   .hill {
     background-image: url(assets/thirdhillssvg.svg);
@@ -591,16 +590,18 @@ img.hover-shadow {
   .firstTrees {
     background-image: url(assets/firsttreestest.png);
     background-size: 120%;
-    top: .5rem;
+    top: 0.5rem;
   }
-  
+
   .scrollIcon {
     bottom: 1rem;
   }
 }
 
-
 @media (max-width: 478px) {
+  .home {
+    min-height: 100vh;
+  }
   .default {
     display: none;
   }
@@ -620,14 +621,13 @@ img.hover-shadow {
     letter-spacing: 3px;
   }
   .subtitle {
-    position:fixed;
+    position: fixed;
     right: 50%;
     left: 0;
     top: 35%;
     text-align: center;
-    font-size: clamp(1.3rem, 0.5570rem + 1.0127vw, 1.5rem);
+    font-size: clamp(1.3rem, 0.557rem + 1.0127vw, 1.5rem);
   }
-
 
   .mtrainier {
     background-image: url(assets/mtrainiersvg.svg);
@@ -643,7 +643,7 @@ img.hover-shadow {
   .middletrees {
     background-image: url(assets/secondtrees.png);
     background-size: 195%;
-    top: -.5rem;
+    top: -0.5rem;
   }
   .hill {
     background-image: url(assets/thirdhillssvg.svg);
@@ -655,9 +655,9 @@ img.hover-shadow {
     background-image: url(assets/firsttreestest.png);
     background-size: 200%;
     top: 0;
+    bottom: 0;
   }
 }
-
 
 /* Here the scale changes from 0 to 1. To add the bounciness 
 effect, the scale is set to 1.25 midway through the animation
