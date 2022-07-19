@@ -1,63 +1,147 @@
-body {
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap");
+/* CLAMP PROJECT IMAGES FOR RESPONSIVENESS */
+/* https://michalsnik.github.io/aos/ animate on scroll css */
+/* animate avatar. maybe blink. maybe pop into frame */
+* {
   margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
 }
 
-[data-scroll-container] {
-  overflow: hidden !important;
+:root {
+  --white: #E6F4F1;
 }
 
-#container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 1;
+body {
+  background-color: #f2f9f8;
+  color: #3C4856;
 }
 
-.panel {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  will-change: transform;
+.first {
+  background-color: #E6F4F1;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  height: 80vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 30px;
-  font-weight: 900;
+  flex-wrap: wrap;
+  /* vvvv CHANGE FOR MOBILE */
+  gap: 4rem;
 }
-
-.panel.red {
-  background: red;
-
+.avatar {
+  /* mouseover avatar change to real picture? */
+  /* vvv CLAMP SIZE AND HAVE MIN SIZE BE FOR MOBILE */
+  width: 22rem;
 }
-
-.panel.purple {
-  background: purple;
-}
-
-.panel.tomato {
-  background: tomato;
-}
-
-section.content {
-  position: relative;
-  height: 300vh;
-  background-color: teal;
-  color: #fff;
+.first-heading {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  margin-top: -200vh;
-  z-index: 0;
 }
-
+h1, h2 {
+  color: #3C4856;
+}
 h1 {
-  color: white;
-  font-size: 30px;
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 5rem;
+}
+.subtitle {
+  font-weight: 700;
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: 3px;
 }
 
 
+
+.second {
+  background-color: #f2f9f8;
+}
+.projects-heading {
+  padding-top: 3rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 3rem;
+
+}
+.project-img {
+  max-width: 37.5rem;
+  /* min-width: 20rem; MOBILE?*/
+}
+.project-title {
+  font-weight: 600;
+  
+}
+.project-card-text {
+  max-width: 31rem;
+}
+.project-button-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.project-button {
+  background-color: #bdf1e3;
+  padding: .8rem 1.5rem;
+  border-radius: 7%;
+  cursor: pointer;
+}
+.project-button:hover {
+  background-color: #c9f6ea;
+}
+
+
+
+.contact {
+  background-color: #5f9ea0;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 8rem;
+  height: 80vh;
+}
+.bubble {
+  align-self: flex-end;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  padding: 20px;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  background-color: var(--white);
+  transform-origin: 0% 100%;
+}
+.bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 1rem solid var(--white);
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid var(--white);
+  border-bottom: 1rem solid transparent;
+  right: 19px;
+  bottom: -1.7rem;
+}
+.contacticons {
+  max-width: 7rem;
+}
+.contactGreeting {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0;
+  
+}

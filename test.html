@@ -1,48 +1,138 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - v2 - Layered Pinning From Bottom - ScrollTrigger with Locomotive Scroll</title>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'><link rel="stylesheet" href="test.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TEST PORTFOLIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div data-scroll-container> 
-
-  <section id="container"> 
-
-    <div class="panel red">
-      <div>
-        ONE
-      </div>
-    </div>
-
-    <div class="panel purple">
-      <div>
-        TWO
-      </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
     
-    <div class="panel tomato">
-      <div>
-        THREE
+    <link rel="stylesheet" href="test.css" />
+
+    <script src="./test.js"></script>
+  </head>
+  <body>
+
+    <section class="first">
+      <img src="/assets/avatar.svg" alt="" class="avatar">
+      <div class="first-heading">
+        <h1>Wayne Tasaki</h1>
+        <h2 class="subtitle">Frontend Web Developer</h2>
       </div>
-    </div>
-    
-  </section> 
-    
-  <section class="content">
-    <h1>Content outside of layered pinning</h1>
-    <h1>Content outside of layered pinning</h1>
-    <h1>Content outside of layered pinning</h1>
-  </section>
+    </section>
 
-</div>
-<!-- partial -->
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script><script  src="./script.js"></script>
+    <section class="second">
+      <h2 class="projects-heading">Projects</h2>
 
-</body>
+      <div class="project-card">
+        <img src="assets/project-planets.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Planet Facts Site</h3>
+          <p class="project-summary">Educational website with information on the planets of our solar
+            system.</p>
+          <p class="project-description">Using a JSON file, I have the content on the page dynamically
+            change based on what is clicked. Each time content changes, I use
+            a fade-in and out animation which I felt is a better experience
+            than having it abruptly change. I also chose to make the
+            background slowly animated across the x-axis to give the feeling
+            that the planets are moving through space.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section class="contact">
+      <div class="contact-wrapper">
+        <div class="bubble notch" id="speechBubble">
+          <img src="assets/email.svg" alt="" class="contacticons" />
+          <img src="assets/linkedin.svg" alt="" class="contacticons" />
+          <img src="assets/githubcontact.svg" alt="" class="contacticons" />
+          <img src="assets/twitter.svg" alt="" class="contacticons" />
+        </div>
+        <h2 class="contactGreeting">Reach out and say hello!</h2>
+    </section>
+  </body>
 </html>
