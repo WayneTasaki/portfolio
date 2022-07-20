@@ -18,7 +18,7 @@ body {
 }
 
 .first {
-  background-color: #E6F4F1;
+  background-color: #ccf4ea;
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   height: 80vh;
   display: flex;
@@ -101,11 +101,25 @@ h1 {
 
 
 .contact {
-  background-color: #5f9ea0;
+  background-color: #ccf4ea;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-  padding-top: 8rem;
-  height: 80vh;
+  padding-top: 7rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contactGreeting {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
 .bubble {
   align-self: flex-end;
   opacity: 1;
@@ -120,7 +134,7 @@ h1 {
   font-weight: 900;
   color: #fff;
   position: relative;
-  background-color: var(--white);
+  background-color: #eafaf6;
   transform-origin: 0% 100%;
 }
 .bubble:after {
@@ -128,9 +142,9 @@ h1 {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 1rem solid var(--white);
+  border-left: 1rem solid #eafaf6;
   border-right: 1rem solid transparent;
-  border-top: 1rem solid var(--white);
+  border-top: 1rem solid #eafaf6;
   border-bottom: 1rem solid transparent;
   right: 19px;
   bottom: -1.7rem;
@@ -138,10 +152,8 @@ h1 {
 .contacticons {
   max-width: 7rem;
 }
-.contactGreeting {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 800;
-  margin-bottom: 0;
-  
+
+/* contact form */
+form {
+  display: flex;
 }
