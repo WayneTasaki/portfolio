@@ -2,266 +2,140 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wayne Tasaki | Frontend Web Developer</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"/> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
 
-    <script src="main.js" defer></script>
-
+    <script defer src="/main.js"></script>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
 
-    <!-- ---------------- -->
-    <!-- css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-
-    <!-- js -->
-    <script
-      defer
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"
-    ></script>
-    <script
-      defer
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"
-    ></script>
+<!-- vvvv Is this to make smoothscrolling? If not, find something to smooth scroll on page -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/ScrollToPlugin.min.js"></script>
 
-    <title>Wayne Tasaki | Frontend Web Developer</title>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>        
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+
+    <script defer src="contact.js"></script>
+
+    
+    <link rel="stylesheet" href="styles.css" />
+
+    
   </head>
   <body>
-    <section class="home" id="home">
-      <div class="home-wrapper">
-        <!-- <div class="container"> -->
 
-        <div class="home-bg layer parallax" data-depth="0.10"></div>
-        <h1 class="main-title default">Wayne Tasaki</h1>
-        <h1 class="main-title mobile-firstname">
-          Wayne
-          <span class="main-title mobile-lastname">Tasaki</span>
-        </h1>
-
+    <section class="first">
+      <img src="/assets/avatar.svg" alt="" class="avatar">
+      <div class="first-heading">
+        <h1>Wayne Tasaki</h1>
         <h2 class="subtitle">Frontend Web Developer</h2>
-        <div class="mtrainier layer parallax" data-depth="0.55"></div>
-        <div class="backtrees layer parallax" data-depth="0.80"></div>
-        <div class="hill layer parallax" data-depth="0.75"></div>
-        <div class="middletrees layer parallax" data-depth="0.70"></div>
-        <div class="firstTrees layer parallax" data-depth=".94"></div>
-        <!-- <div class="iconwrapper"> -->
-        <img src="assets/scroll.svg" alt="" class="scrollIcon" />
-        <!-- </div> -->
-        <!-- </div> -->
-      </div>
-      <nav>
-        <!-- <p>Wayne Tasaki</p>
-        <a href="" class="button">signup</a> -->
-      </nav>
-    </section>
-
-    <div id="about" class="about section">
-      <!-- <div class="about-wrapper"></div> -->
-
-      <div class="about-wrapper">
-        <img src="assets/OutlinedProfilePic.png" class="me" alt="" />
-        <img src="assets/hellomynameis.svg" class="hello" alt="" />
-        <p class="text firstp">
-          I've been playing with graphic design and web technologies since 2003
-          when I first taught myself Adobe Photoshop CS and Macromedia
-          Dreamweaver. Though I eventually went to school for graphic design and
-          worked as a freelancer, I found a similar passion in entrepreneurship.
-        </p>
-        <p class="text secondp">
-          Having taken a detour in life to build my own businesses, the most
-          successful of which I ran for the last 5 years, I've come full circle
-          to chase my first love, the web.
-        </p>
-        <p class="text thirdp">
-          I need to learn. All the time. I have an insatiable desire to learn
-          new things and having done so my whole life, I've developed tools and
-          habits to pick things up quickly. That, paired with my ability to
-          problem solve, is what I believe would make me a killer member of any
-          development team.
-        </p>
-        <div class="toolbelt">
-          <img src="assets/html.svg" alt="" class="tools" id="html" />
-          <img src="assets/css.svg" alt="" class="tools" id="css" />
-          <img src="assets/js.svg" alt="" class="tools" id="js" />
-          <img src="assets/ps.svg" alt="" class="tools" id="ps" />
-          <img src="assets/figma.svg" alt="" class="tools" id="figma" />
-          <img src="assets/vscode.svg" alt="" class="tools" id="vscode" />
-          <img src="assets/git.svg" alt="" class="tools" id="git" />
-        </div>
-      </div>
-    </div>
-
-    <section class="projects section">
-      <div class="projects-content">
-        <div class="project-wrapper">
-          <img
-            src="assets/project-planets.png"
-            alt=""
-            class="projectmockup"
-            onclick="openModal();currentSlide(1)"
-          />
-          <div class="project-text-wrapper">
-            <div class="project-header">
-              <h3>Planet Facts Site</h3>
-              <div class="project-links-wrapper">
-                <a
-                  href="https://waynetasaki.github.io/planets-fact-site/"
-                  target="_blank"
-                  class="project-links"
-                  >Live Site</a
-                >|<a
-                  href="https://github.com/WayneTasaki/planets-fact-site"
-                  target="_blank"
-                  class="project-links"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-            <p class="project-description summary">
-              Educational website with information on the planets of our solar
-              system
-            </p>
-            <p class="project-description">
-              Using a JSON file, I have the content on the page dynamically
-              change based on what is clicked. Each time content changes, I use
-              a fade-in and out animation which I felt is a better experience
-              than having it abruptly change. I also chose to make the
-              background slowly animated across the x-axis to give the feeling
-              that the planets are moving through space.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-wrapper">
-          <img
-            src="assets/project-equalizer.png"
-            alt=""
-            class="projectmockup"
-            onclick="openModal();currentSlide(2)"
-          />
-          <div class="project-text-wrapper">
-            <div class="project-header">
-              <h3>Equalizer Landing Page</h3>
-              <div class="project-links-wrapper">
-                <a
-                  href="https://waynetasaki.github.io/equalizerLandingPage/"
-                  target="_blank"
-                  class="project-links"
-                  >Live Site</a
-                >|<a
-                  href="https://github.com/WayneTasaki/equalizerLandingPage"
-                  target="_blank"
-                  class="project-links"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-            <p class="project-description summary">
-              Landing page for an audio equalizer software being sold by a
-              fictional company named Equalizer
-            </p>
-            <p class="project-description">
-              Though this is a simple landing page, the complexity comes from
-              its responsiveness. When adjusting the browser window, elements on
-              the page slowly move into place with very few hard breakpoints
-              that change the layout. I did this with extensive use of clamp()
-              on margins.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-wrapper">
-          <img
-            src="assets/project-equalizer.png"
-            alt=""
-            class="projectmockup"
-            onclick="openModal();currentSlide(3)"
-          />
-          <div class="project-text-wrapper">
-            <div class="project-header">
-              <h3>Equalizer Landing Page</h3>
-              <div class="project-links-wrapper">
-                <a
-                  href="https://waynetasaki.github.io/equalizerLandingPage/"
-                  target="_blank"
-                  class="project-links"
-                  >Live Site</a
-                >|<a
-                  href="https://github.com/WayneTasaki/equalizerLandingPage"
-                  target="_blank"
-                  class="project-links"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-            <p class="project-description summary">
-              Landing page for an audio equalizer software being sold by a
-              fictional company named Equalizer
-            </p>
-            <p class="project-description">
-              Though this is a simple landing page, the complexity comes from
-              its responsiveness. When adjusting the browser window, elements on
-              the page slowly move into place with very few hard breakpoints
-              that change the layout. I did this with extensive use of clamp()
-              on margins.
-            </p>
-          </div>
-        </div>
-        <div class="project-wrapper">
-          <img
-            src="assets/project-equalizer.png"
-            alt=""
-            class="projectmockup"
-            onclick="openModal();currentSlide(4)"
-          />
-          <div class="project-text-wrapper">
-            <div class="project-header">
-              <h3>Equalizer Landing Page</h3>
-              <div class="project-links-wrapper">
-                <a
-                  href="https://waynetasaki.github.io/equalizerLandingPage/"
-                  target="_blank"
-                  class="project-links"
-                  >Live Site</a
-                >|<a
-                  href="https://github.com/WayneTasaki/equalizerLandingPage"
-                  target="_blank"
-                  class="project-links"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-            <p class="project-description summary">
-              Landing page for an audio equalizer software being sold by a
-              fictional company named Equalizer
-            </p>
-            <p class="project-description">
-              Though this is a simple landing page, the complexity comes from
-              its responsiveness. When adjusting the browser window, elements on
-              the page slowly move into place with very few hard breakpoints
-              that change the layout. I did this with extensive use of clamp()
-              on margins.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
-    <section class="contact section">
+
+    <section class="second">
+      <h2 class="projects-heading">Projects</h2>
+
+      <div class="project-card">
+        <img src="assets/project-planets.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Planet Facts Site</h3>
+          <p class="project-summary">Educational website with information on the planets of our solar
+            system.</p>
+          <p class="project-description">Using a JSON file, I have the content on the page dynamically
+            change based on what is clicked. Each time content changes, I use
+            a fade-in and out animation which I felt is a better experience
+            than having it abruptly change. I also chose to make the
+            background slowly animated across the x-axis to give the feeling
+            that the planets are moving through space.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/equalizerproject.png" alt="" class="project-img"/>
+        <div class="project-card-text">
+          <h3 class="project-title">Equalizer Landing Page</h3>
+          <p class="project-summary">Landing page for an audio equalizer software being sold by a
+            fictional company named Equalizer.</p>
+          <p class="project-description">Though this is a simple landing page, the complexity comes from
+            its responsiveness. When adjusting the browser window, elements on
+            the page slowly move into place with very few hard breakpoints
+            that change the layout. I did this with extensive use of clamp()
+            on margins.</p>
+          <div class="project-button-wrapper">
+            <p class="project-button">Live Site</p>
+            <p class="project-button">GitHub</p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section class="contact">
       <div class="contact-wrapper">
         <div class="bubble notch" id="speechBubble">
           <img src="assets/email.svg" alt="" class="contacticons" />
@@ -271,74 +145,16 @@
         </div>
         <h2 class="contactGreeting">Reach out and say hello!</h2>
       </div>
-    </section>
 
-    <!-- The Modal/Lightbox -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="mySlides">
-          <img src="assets/project-planets.png" class="slideImg" />
-        </div>
-
-        <div class="mySlides">
-          <img src="assets/project-equalizer.png" class="slideImg" />
-        </div>
-
-        <div class="mySlides">
-          <img src="assets/project-equalizer.png" class="slideImg" />
-        </div>
-
-        <div class="mySlides">
-          <img src="assets/project-equalizer.png" class="slideImg" />
-        </div>
-
-        <!-- Next/previous controls -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <!-- Caption text -->
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
-
-        <!-- Thumbnail image controls -->
-        <div class="column">
-          <img
-            class="demo"
-            src="assets/project-planets.png"
-            onclick="currentSlide(1)"
-            alt="Nature"
-          />
-        </div>
-
-        <div class="column">
-          <img
-            class="demo"
-            src="assets/project-equalizer.png"
-            onclick="currentSlide(2)"
-            alt="Snow"
-          />
-        </div>
-
-        <div class="column">
-          <img
-            class="demo"
-            src="assets/project-equalizer.png"
-            onclick="currentSlide(3)"
-            alt="Mountains"
-          />
-        </div>
-
-        <div class="column">
-          <img
-            class="demo"
-            src="assets/project-equalizer.png"
-            onclick="currentSlide(4)"
-            alt="Lights"
-          />
-        </div>
+      <!-- Contact Form -->
+      <div class="form-wrapper">
+        <form onsubmit="sendEmail()">
+          <input type="text" name="name" id="name" placeholder="Name" required>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+          <input type="text" name="subject" id="subject" placeholder="Subject" required>
+          <input type="text" name="message" id="message" placeholder="What's up?" required>
+        </form>
       </div>
-    </div>
+    </section>
   </body>
 </html>
