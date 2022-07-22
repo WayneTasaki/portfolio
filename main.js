@@ -1,7 +1,8 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let controller = new ScrollMagic.Controller();
 
-
+// CHANGE ALL VAR TO LET OR CONST
+// COMMENT WHAT EVERYTHING DOES
 
 ///////Extensions:
 TimelineLite.prototype.wait = function (position) {
@@ -30,18 +31,42 @@ new ScrollMagic.Scene({
   .setTween(popup)
   .addTo(controller);
 
+  
   // contact form
+  emailjs.init('O23p9XzeafjBpOQzJ');
+let contactForm = document.getElementById('form-wrapper')
+let userName = document.getElementById('name')
+let userEmail = document.getElementById('email')
+let subject = document.getElementById('subject')
+let message = document.getElementById('message')
+let formSubmitMessageBox = document.getElementById('form-submit-message-wrapper')
+let formSubmitMessage = document.getElementById('form-submit-message')
 
-  function sendEmail() {
-  Email.send({
-    Host : "smtp.yourisp.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-  }).then(
-  message => alert(message)
-  );
-  }
+
+let contactSection = document.getElementById('contact')
+let emailIcon = document.getElementById('emailIcon')
+// FIGURE OUT MOBILE TAPPING OPTION? OR ALWAYS HAVE EMAIL FORM VISIBLE ON MOBILE
+emailIcon.addEventListener('click', showForm, {once: true})
+
+function showForm() {
+gsap.from("#form-wrapper", 0.3, { scale: 0, ease: Back.easeOut, x: "0" });
+  contactForm.style.display = 'block'
+  contactSection.style.paddingBottom = '2rem'  
+}
+
+
+  window.onload = function() {
+    userName.value =''
+    userEmail.value =''
+    subject.value =''
+    message.value =''
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('contact_service', 'contact_form', this)
+            .then(function() {
+                formSubmitMessageBox.style.visibility = 'visible'
+                formSubmitMessageBox.style.opacity = '1'
+                formSubmitMessage.style.opacity = '1'
+            });
+    });
+}
