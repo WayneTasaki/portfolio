@@ -113,19 +113,25 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   gap: 3rem;
-
+  /* flex-wrap: wrap; */
 }
 .project-img {
+  width: 100%;
   max-width: 37.5rem;
   /* min-width: 20rem; MOBILE?*/
 }
 .project-title {
   font-weight: 600;
-  
 }
 .project-card-text {
+  width: 100%;
   max-width: 31rem;
+}
+.project-description {
+  text-indent: 1.5rem;
 }
 .project-button-wrapper {
   display: flex;
@@ -299,9 +305,31 @@ textarea {
   }
   /* CLAMP THESE TWO AT THE SCREENSIZE THEY NEED CLAMPING */
   h1 {
-    font-size: 3.1rem;
+    font-size: clamp(3.1rem, -0.8365rem + 13.1765vw, 4.5rem);
   }
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .projects-heading {
+    margin-bottom: 4rem;
+    padding-top: 1.5rem;
+  }
+  .project-card {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .project-card-text {
+    max-width: 40rem;
+  }
+  .project-title {
+    text-align: center;
+    font-weight: 700;
+  }
+  .project-summary {
+    text-align: center;
+    font-style: italic;
+  }
+  .project-button-wrapper {
+    justify-content: center;
   }
 }
