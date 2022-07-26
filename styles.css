@@ -67,8 +67,6 @@ a:hover:after {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
   /* vvvv CHANGE FOR MOBILE */
   gap: 4rem;
 }
@@ -99,6 +97,8 @@ h1 {
 
 .second {
   background-color: #f2f9f8;
+  display: flex;
+  flex-direction: column;
 }
 .projects-heading {
   padding-top: 3rem;
@@ -155,17 +155,19 @@ h1 {
 
 .contact {
   background-color: #ccf4ea;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-  padding-top: 5rem;
+  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 8rem;
   /* max-height: 80vh; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-bottom: 15rem;
 }
 .contact-wrapper {
   display: flex;
   flex-direction: column;
+  margin: 0 .5rem 0 .5rem;
 }
 .contactGreeting {
   text-align: center;
@@ -216,8 +218,8 @@ h1 {
 #form-wrapper {
   background-color: #eafaf6;
   border-radius: .4rem;
-  margin-top: 2rem;
-  width: 100%;
+  margin: 2rem 1rem 0 1rem;
+  width: 95%;
   max-width: 35rem;
   position: relative;
   display: none;
@@ -290,7 +292,8 @@ textarea {
   }
   nav {
     justify-content: center;
-    margin: clamp(0.5rem, -0.6616rem + 4.1027vw, 1rem) auto;
+    margin: clamp(0.5rem, -0.6616rem + 4.1027vw, 1rem) auto 1.5rem;
+    gap: clamp(1.7rem, -6.3976rem + 40.4878vw, 10rem);
   }
   .wrapper {
     flex-direction: column;
@@ -305,14 +308,15 @@ textarea {
   }
   /* CLAMP THESE TWO AT THE SCREENSIZE THEY NEED CLAMPING */
   h1 {
-    font-size: clamp(3.1rem, -0.8365rem + 13.1765vw, 4.5rem);
+    font-size: clamp(2.7rem, 0.9439rem + 8.7805vw, 4.5rem);
   }
   .subtitle {
-    font-size: 1.6rem;
+    font-size: clamp(1.25rem, 0.9085rem + 1.7073vw, 1.6rem);
   }
   .projects-heading {
     margin-bottom: 4rem;
     padding-top: 1.5rem;
+    font-size: clamp(2.4rem, 1.3268rem + 5.3659vw, 3.5rem);
   }
   .project-card {
     flex-wrap: wrap;
@@ -331,5 +335,21 @@ textarea {
   }
   .project-button-wrapper {
     justify-content: center;
+  }
+}
+
+@media (max-width: 466px) {
+  .first {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  .avatar {
+    /* margin-top: 1rem; */
+    margin-bottom: 3rem;
+  }
+  form {
+    padding: .8rem .5rem 1rem .5rem;
+  }
+  .contact {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
   }
 }
