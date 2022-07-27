@@ -1,4 +1,8 @@
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+AOS.init({
+  once: true,
+});
+
+gsap.registerPlugin(ScrollTrigger);
 let controller = new ScrollMagic.Controller();
 
 // CHANGE ALL VAR TO LET OR CONST

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap");
-/* CLAMP PROJECT IMAGES FOR RESPONSIVENESS */
-/* https://michalsnik.github.io/aos/ animate on scroll css */
+/* add svg icons next to nav links? */
+/* mouseover avatar change to real picture? */
 /* animate avatar. maybe blink. maybe pop into frame */
+/* animate first section text */
 /* create css variables whereever possible */
 /* convert all px into rem */
 * {
@@ -9,6 +10,7 @@
   padding: 0;
   font-family: "Open Sans";
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -42,11 +44,11 @@ nav {
   content: "";
   position: absolute;
   width: 100%;
-  -webkit-transform: scaleX(0); /* WebKit */
-  -moz-transform: scaleX(0); /* Mozilla */
-  -o-transform: scaleX(0); /* Opera */
-  -ms-transform: scaleX(0); /* Internet Explorer */
-  transform: scaleX(0); /* CSS3 */
+  -webkit-transform: scaleX(0); 
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
   height: 1px;
   bottom: 0;
   left: 0;
@@ -60,11 +62,11 @@ nav {
   color: #3c4856;
 }
 a:hover:after {
-  -webkit-transform: scaleX(1); /* WebKit */
-  -moz-transform: scaleX(1); /* Mozilla */
-  -o-transform: scaleX(1); /* Opera */
-  -ms-transform: scaleX(1); /* Internet Explorer */
-  transform: scaleX(1); /* CSS3 */
+  -webkit-transform: scaleX(1); 
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
   transform-origin: bottom left;
   color: #3c4856;
 }
@@ -80,12 +82,9 @@ a:hover:after {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  /* vvvv CHANGE FOR MOBILE */
   gap: 4rem;
 }
 .avatar {
-  /* mouseover avatar change to real picture? */
-  /* vvv CLAMP SIZE AND HAVE MIN SIZE BE FOR MOBILE */
   width: 22rem;
 }
 .first-heading {
@@ -127,12 +126,10 @@ h1 {
   margin-left: 2rem;
   margin-right: 2rem;
   gap: 3rem;
-  /* flex-wrap: wrap; */
 }
 .project-img {
   width: 100%;
   max-width: 37.5rem;
-  /* min-width: 20rem; MOBILE?*/
 }
 .project-title {
   font-weight: 800;
@@ -148,7 +145,6 @@ h1 {
   margin-bottom: 1rem;
 }
 .project-description {
-  /* text-indent: 1rem; */
   margin-bottom: 1.5rem;
 }
 .project-button-wrapper {
@@ -164,6 +160,7 @@ h1 {
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .project-button:hover {
   background-color: #5fa0d5;
@@ -171,9 +168,8 @@ h1 {
 
 .contact {
   background-color: #ccf4ea;
-  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
-  padding-top: 4rem;
-  /* max-height: 80vh; */
+  clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0 100%);
+  padding-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -229,10 +225,9 @@ h1 {
   width: 100%;
   max-width: 7rem;
   min-width: 2rem;
-}
-#emailIcon {
   cursor: pointer;
 }
+
 
 /* contact form */
 #form-wrapper {
@@ -275,7 +270,6 @@ button {
   width: 25%;
   align-self: center;
   padding: 0.5rem;
-  /* color: #3c4856; */
   color: black;
   font-weight: 600;
   cursor: pointer;
@@ -335,7 +329,6 @@ textarea {
   .avatar {
     width: clamp(19rem, 10.1315rem + 29.3049vw, 22rem);
   }
-  /* CLAMP THESE TWO AT THE SCREENSIZE THEY NEED CLAMPING */
   h1 {
     font-size: clamp(2.7rem, 0.9439rem + 8.7805vw, 4.5rem);
   }
@@ -366,7 +359,7 @@ textarea {
   }
   .contact {
     padding-top: 5rem;
-    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 3.2rem, 100% 0, 100% 100%, 0 100%);
   }
   .contact-greeting {
     font-size: clamp(3rem, 2.0244rem + 4.8780vw, 4rem);
@@ -378,7 +371,6 @@ textarea {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
   .avatar {
-    /* margin-top: 1rem; */
     margin-bottom: 3rem;
   }
   .bubble {
@@ -388,8 +380,6 @@ textarea {
     padding: 0.8rem 0.5rem 1rem 0.5rem;
   }
   .contact {
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 3rem, 100% 0, 100% 100%, 0 100%);
   }
 }
-/* clamp contact section paddingtop to go smaller on smaller screensizes. Also remove Gap and add margins to items needing spaces.
-change contact form display block to none. basically change it as it was before. also change its js. (OR MESS WITH VISIBILITY) take the length of the form and make the contact section that length. That way, */
