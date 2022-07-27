@@ -45,7 +45,7 @@ nav {
   content: "";
   position: absolute;
   width: 100%;
-  -webkit-transform: scaleX(0); 
+  -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -o-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -63,7 +63,7 @@ nav {
   color: #3c4856;
 }
 a:hover:after {
-  -webkit-transform: scaleX(1); 
+  -webkit-transform: scaleX(1);
   -moz-transform: scaleX(1);
   -o-transform: scaleX(1);
   -ms-transform: scaleX(1);
@@ -122,8 +122,8 @@ h1 {
   background-color: #5baaea; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  border-radius: .5rem; /* Rounded corners */
-  transition: all .3s;
+  border-radius: 0.5rem; /* Rounded corners */
+  transition: all 0.3s;
   padding: 0.6rem 1.2rem;
   border-style: none;
   font-size: 18px; /* Increase font size */
@@ -249,7 +249,6 @@ h1 {
   min-width: 2rem;
   cursor: pointer;
 }
-
 
 /* contact form */
 #form-wrapper {
@@ -384,7 +383,7 @@ textarea {
     clip-path: polygon(0 3.2rem, 100% 0, 100% 100%, 0 100%);
   }
   .contact-greeting {
-    font-size: clamp(3rem, 2.0244rem + 4.8780vw, 4rem);
+    font-size: clamp(3rem, 2.0244rem + 4.878vw, 4rem);
   }
 }
 
