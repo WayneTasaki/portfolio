@@ -75,7 +75,7 @@ a:hover:after {
 .wrapper {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 }
 .first {
   background-color: #ccf4ea;
@@ -85,6 +85,7 @@ a:hover:after {
   flex-direction: column;
   gap: 4rem;
 }
+
 .avatar {
   width: 22rem;
 }
@@ -95,11 +96,13 @@ a:hover:after {
   align-items: center;
 }
 
-h1 {
+.main-title {
+  position: relative;
   font-weight: 800;
   font-size: 5rem;
 }
 .subtitle {
+  position: relative;
   font-weight: 800;
   font-size: 2rem;
   font-style: italic;
@@ -350,7 +353,7 @@ textarea {
   .avatar {
     width: clamp(19rem, 10.1315rem + 29.3049vw, 22rem);
   }
-  h1 {
+  .main-title {
     font-size: clamp(2.7rem, 0.9439rem + 8.7805vw, 4.5rem);
   }
   .subtitle {

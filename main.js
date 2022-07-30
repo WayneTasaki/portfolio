@@ -9,6 +9,48 @@ let controller = new ScrollMagic.Controller();
 // COMMENT WHAT EVERYTHING DOES
 // have contact icons change on mouseover
 
+// gsap.timeline({
+// 	scrollTrigger: {
+// 		trigger: ".first",
+// 		start: "top top",
+// 		end: "+=100%",
+// 		scrub: true,
+// 		invalidateOnRefresh: true
+// 	},
+//   scrollTrigger: {
+//     trigger: ".first",
+//     start: "top top",
+//     end: "+=100%",
+//     scrub: true,
+//     invalidateOnRefresh: true,
+//   },
+// });
+
+
+// header animations
+// name animation
+gsap.from('.main-title', {opacity:0, duration: 1.4, delay: .5, y: 35, ease:'expo.out'});
+gsap.from('.subtitle', {opacity:0, duration: 1, delay: .7 , y: 35, ease:'expo.out'});
+
+// avatar animation
+const avatarBody = document.getElementById('avatarBody')
+gsap.from(avatarBody, {duration: 0.7, delay: .9, ease: Back.easeInOut.config(0.45), y: 300})
+
+
+
+const blink = gsap.timeline({delay:2, repeat: -1, repeatDelay: 5});
+  blink
+    .to(['#eye-right', '#eye-left'], {duration: 0.01, opacity: 0}, 0)
+    .to(['#eye-right-closed', '#eye-left-closed'], {duration: 0.01, opacity: 1}, 0)
+    .to(['#eye-right', '#eye-left'], {duration: 0.01, opacity: 1}, 0.15)
+    .to(['#eye-right-closed', '#eye-left-closed'], {duration: 0.01, opacity: 0}, 0.15);
+
+    
+    
+    
+
+    
+
 ///////Extensions:
 TimelineLite.prototype.wait = function (position) {
   var time = this.duration();
