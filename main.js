@@ -8,6 +8,7 @@ let controller = new ScrollMagic.Controller();
 // CHANGE ALL VAR TO LET OR CONST
 // COMMENT WHAT EVERYTHING DOES
 // have contact icons change on mouseover
+// change avatar id names to eye-left-open/closed
 
 // gsap.timeline({
 // 	scrollTrigger: {
@@ -26,30 +27,73 @@ let controller = new ScrollMagic.Controller();
 //   },
 // });
 
-
 // header animations
 // name animation
-gsap.from('.main-title', {opacity:0, duration: 1.4, delay: .5, y: 35, ease:'expo.out'});
-gsap.from('.subtitle', {opacity:0, duration: 1, delay: .7 , y: 35, ease:'expo.out'});
+gsap.from(".main-title", {
+  opacity: 0,
+  duration: 1.4,
+  delay: 0.5,
+  y: 35,
+  ease: "expo.out",
+});
+gsap.from(".subtitle", {
+  opacity: 0,
+  duration: 1,
+  delay: 0.7,
+  y: 35,
+  ease: "expo.out",
+});
+
+
+
+
+
+
+// CREATE CIRCLE
+
+var tl = new TimelineMax();
+var data = document.querySelector(".avatar").getBBox();
+                              
+TweenMax.set("#cover", {
+  attr: {
+    cx: data.x + data.width / 2,
+    cy: data.y + data.height / 2,
+    r: figureRadius(data.width, data.height)
+  }
+});
+
+tl.from("#cover", 1.2, { attr: { r: 0 }, ease: Power4.easeInOut });
+
+function figureRadius(w, h) {
+  return Math.sqrt(Math.pow(w, 2) + Math.pow(h, 2)) / 2;
+}
+
+
+
 
 // avatar animation
-const avatarBody = document.getElementById('avatarBody')
-gsap.from(avatarBody, {duration: 0.7, delay: .9, ease: Back.easeInOut.config(0.45), y: 300})
+const avatarBody = document.getElementById("avatarBody");
+gsap.from(avatarBody, {
+  duration: 0.7,
+  delay: 0.9,
+  ease: Back.easeInOut.config(0.45),
+  y: 300,
+});
 
-
-
-const blink = gsap.timeline({delay:2, repeat: -1, repeatDelay: 5});
-  blink
-    .to(['#eye-right', '#eye-left'], {duration: 0.01, opacity: 0}, 0)
-    .to(['#eye-right-closed', '#eye-left-closed'], {duration: 0.01, opacity: 1}, 0)
-    .to(['#eye-right', '#eye-left'], {duration: 0.01, opacity: 1}, 0.15)
-    .to(['#eye-right-closed', '#eye-left-closed'], {duration: 0.01, opacity: 0}, 0.15);
-
-    
-    
-    
-
-    
+const blink = gsap.timeline({ delay: 2, repeat: -1, repeatDelay: 5 });
+blink
+  .to(["#eye-right", "#eye-left"], { duration: 0.01, opacity: 0 }, 0)
+  .to(
+    ["#eye-right-closed", "#eye-left-closed"],
+    { duration: 0.01, opacity: 1 },
+    0
+  )
+  .to(["#eye-right", "#eye-left"], { duration: 0.01, opacity: 1 }, 0.15)
+  .to(
+    ["#eye-right-closed", "#eye-left-closed"],
+    { duration: 0.01, opacity: 0 },
+    0.15
+  );
 
 ///////Extensions:
 TimelineLite.prototype.wait = function (position) {
