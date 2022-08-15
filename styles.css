@@ -6,6 +6,7 @@
 /* animate first section text */
 /* create css variables whereever possible */
 /* convert all px into rem */
+/* Add ? icon whenever Frontend Mentor challenge is shown. hover over and show popup to explain what it is */
 * {
   margin: 0;
   padding: 0;
